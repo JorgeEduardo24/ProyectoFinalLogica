@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "T",
+					"strict" : false
+				},
+				{
+					"name" : "Ca",
+					"strict" : false
+				},
+				{
+					"name" : "Display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Display[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SEGMENTS[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "M500",
+					"strict" : false
+				},
+				{
+					"name" : "M1000",
+					"strict" : false
+				},
+				{
+					"name" : "clockState",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

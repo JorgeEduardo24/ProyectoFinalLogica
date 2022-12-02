@@ -1,0 +1,394 @@
+Analysis & Synthesis report for FinalProject
+Fri Dec 02 15:50:54 2022
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |FinalProject|fstate
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Dec 02 15:50:54 2022       ;
+; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Revision Name                      ; FinalProject                                ;
+; Top-level Entity Name              ; FinalProject                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 62                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 26                                          ;
+; Total registers                    ; 26                                          ;
+; Total pins                         ; 21                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE6E22C8        ;                    ;
+; Top-level entity name                                                      ; FinalProject       ; FinalProject       ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 6      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+; FinalProject.vhd                 ; yes             ; User VHDL File  ; D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 62          ;
+;                                             ;             ;
+; Total combinational functions               ; 62          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 17          ;
+;     -- 3 input functions                    ; 18          ;
+;     -- <=2 input functions                  ; 27          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 46          ;
+;     -- arithmetic mode                      ; 16          ;
+;                                             ;             ;
+; Total registers                             ; 26          ;
+;     -- Dedicated logic registers            ; 26          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 21          ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; LessThan0~3 ;
+; Maximum fan-out                             ; 19          ;
+; Total fan-out                               ; 284         ;
+; Average fan-out                             ; 2.18        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+; |FinalProject              ; 62 (62)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |FinalProject       ; FinalProject ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |FinalProject|fstate                                                                                                              ;
++------------------+------------------+-----------------+------------------+------------------+------------------+------------------+---------------+
+; Name             ; fstate.State1000 ; fstate.State500 ; fstate.State2500 ; fstate.State3000 ; fstate.State2000 ; fstate.State1500 ; fstate.State0 ;
++------------------+------------------+-----------------+------------------+------------------+------------------+------------------+---------------+
+; fstate.State0    ; 0                ; 0               ; 0                ; 0                ; 0                ; 0                ; 0             ;
+; fstate.State1500 ; 0                ; 0               ; 0                ; 0                ; 0                ; 1                ; 1             ;
+; fstate.State2000 ; 0                ; 0               ; 0                ; 0                ; 1                ; 0                ; 1             ;
+; fstate.State3000 ; 0                ; 0               ; 0                ; 1                ; 0                ; 0                ; 1             ;
+; fstate.State2500 ; 0                ; 0               ; 1                ; 0                ; 0                ; 0                ; 1             ;
+; fstate.State500  ; 0                ; 1               ; 0                ; 0                ; 0                ; 0                ; 1             ;
+; fstate.State1000 ; 1                ; 0               ; 0                ; 0                ; 0                ; 0                ; 1             ;
++------------------+------------------+-----------------+------------------+------------------+------------------+------------------+---------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; Transistor2[0]                                     ; reset               ; yes                    ;
+; Transistor1[0]                                     ; reset               ; yes                    ;
+; Transistor1[1]                                     ; reset               ; yes                    ;
+; Transistor2[2]                                     ; reset               ; yes                    ;
+; Transistor1[2]                                     ; reset               ; yes                    ;
+; Transistor1[3]                                     ; reset               ; yes                    ;
+; Transistor1[4]                                     ; reset               ; yes                    ;
+; Transistor2[5]                                     ; reset               ; yes                    ;
+; Transistor1[6]                                     ; reset               ; yes                    ;
+; Number of user-specified and inferred latches = 9  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 26    ;
+; Number of registers using Synchronous Clear  ; 23    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |FinalProject|Mux4         ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |FinalProject|Mux8         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 21                          ;
+; cycloneiii_ff         ; 26                          ;
+;     SCLR              ; 23                          ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 64                          ;
+;     arith             ; 16                          ;
+;         2 data inputs ; 16                          ;
+;     normal            ; 48                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 10                          ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 17                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.06                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Fri Dec 02 15:50:41 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file servomotor.vhd
+    Info (12022): Found design unit 1: Servomotor-Servomotor File: D:/Usuarios/1004191932/Desktop/FPLD/Servomotor.vhd Line: 15
+    Info (12023): Found entity 1: Servomotor File: D:/Usuarios/1004191932/Desktop/FPLD/Servomotor.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
+    Info (12022): Found design unit 1: divisor-Behavioral File: D:/Usuarios/1004191932/Desktop/FPLD/divisor.vhd Line: 15
+    Info (12023): Found entity 1: divisor File: D:/Usuarios/1004191932/Desktop/FPLD/divisor.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file debounce.vhd
+    Info (12022): Found design unit 1: debounce-Behavioral File: D:/Usuarios/1004191932/Desktop/FPLD/debounce.vhd Line: 26
+    Info (12023): Found entity 1: debounce File: D:/Usuarios/1004191932/Desktop/FPLD/debounce.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
+    Info (12022): Found design unit 1: clk_div-a File: D:/Usuarios/1004191932/Desktop/FPLD/clk_div.vhd Line: 21
+    Info (12023): Found entity 1: clk_div File: D:/Usuarios/1004191932/Desktop/FPLD/clk_div.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file finalproject.vhd
+    Info (12022): Found design unit 1: FinalProject-BEHAVIOR File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 41
+    Info (12023): Found entity 1: FinalProject File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file diagramaestesi.bdf
+    Info (12023): Found entity 1: DiagramaEsteSi
+Info (12127): Elaborating entity "FinalProject" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at FinalProject.vhd(36): used implicit default value for signal "Position" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 36
+Warning (10492): VHDL Process Statement warning at FinalProject.vhd(95): signal "toShow" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at FinalProject.vhd(98): signal "Transistor1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 98
+Warning (10492): VHDL Process Statement warning at FinalProject.vhd(101): signal "Transistor2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at FinalProject.vhd(104): signal "Transistor3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at FinalProject.vhd(107): signal "Transistor4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 107
+Warning (10631): VHDL Process Statement warning at FinalProject.vhd(118): inferring latch(es) for signal or variable "Transistor4", which holds its previous value in one or more paths through the process File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Warning (10631): VHDL Process Statement warning at FinalProject.vhd(118): inferring latch(es) for signal or variable "Transistor3", which holds its previous value in one or more paths through the process File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Warning (10631): VHDL Process Statement warning at FinalProject.vhd(118): inferring latch(es) for signal or variable "Transistor2", which holds its previous value in one or more paths through the process File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Warning (10631): VHDL Process Statement warning at FinalProject.vhd(118): inferring latch(es) for signal or variable "Transistor1", which holds its previous value in one or more paths through the process File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[0]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[1]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[2]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[3]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[4]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[5]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor1[6]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[0]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[1]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[2]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[3]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[4]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[5]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor2[6]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[0]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[1]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[2]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[3]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[4]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[5]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor3[6]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[0]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[1]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[2]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[3]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[4]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[5]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (10041): Inferred latch for "Transistor4[6]" at FinalProject.vhd(118) File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Transistor2[5]" merged with LATCH primitive "Transistor2[2]" File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+    Info (13026): Duplicate LATCH primitive "Transistor1[6]" merged with LATCH primitive "Transistor1[3]" File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 118
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Position" is stuck at GND File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 36
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "r" File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 26
+    Warning (15610): No output dependent on input pin "Change" File: D:/Usuarios/1004191932/Desktop/FPLD/FinalProject.vhd Line: 29
+Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 62 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4996 megabytes
+    Info: Processing ended: Fri Dec 02 15:50:54 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
+
+

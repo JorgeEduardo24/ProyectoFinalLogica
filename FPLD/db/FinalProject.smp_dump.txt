@@ -1,0 +1,10 @@
+
+State Machine - |FinalProject|fstate
+Name fstate.State1000 fstate.State500 fstate.State2500 fstate.State3000 fstate.State2000 fstate.State1500 fstate.State0 
+fstate.State0 0 0 0 0 0 0 0 
+fstate.State1500 0 0 0 0 0 1 1 
+fstate.State2000 0 0 0 0 1 0 1 
+fstate.State3000 0 0 0 1 0 0 1 
+fstate.State2500 0 0 1 0 0 0 1 
+fstate.State500 0 1 0 0 0 0 1 
+fstate.State1000 1 0 0 0 0 0 1 
